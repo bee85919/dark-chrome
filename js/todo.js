@@ -17,6 +17,10 @@ function deleteToDo(event) {
   saveToDos();
 }
 
+function fulfillToDo() {
+  alert("Your desire is fulfilled.")
+}
+
 function paintToDo(newTodo) {
   const li = document.createElement("li");
   li.id = newTodo.id;
@@ -25,6 +29,7 @@ function paintToDo(newTodo) {
   const button = document.createElement("button");
   button.innerText = "❌";
   button.addEventListener("click", deleteToDo);
+  button.addEventListener("click", fulfillToDo);
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
